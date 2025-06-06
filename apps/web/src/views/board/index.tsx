@@ -385,6 +385,8 @@ export default function BoardPage() {
                                             title={card.title}
                                             labels={card.labels}
                                             members={card.members}
+                                            commentCount={card.comments.length}
+                                            hasDescription={!!card.description}
                                           />
                                         </Link>
                                       )}

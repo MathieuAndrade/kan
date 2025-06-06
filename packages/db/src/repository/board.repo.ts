@@ -164,6 +164,12 @@ export const getByPublicId = async (
                   },
                 },
               },
+              comments: {
+                columns: {
+                  publicId: true,
+                },
+                where: isNull(labels.deletedAt),
+              }
             },
             where: and(
               cardIds.length > 0 ? inArray(cards.publicId, cardIds) : undefined,
